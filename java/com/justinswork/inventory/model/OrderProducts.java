@@ -22,13 +22,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table (name = "order_products")
-public class OrderProducts implements Serializable{
-	
-	//IMPLEMENT SERIALIZABLE?
+public class OrderProducts {
 		
-	
-		private static final long serialVersionUID = 1L;
-		
+			
 		@Id
 		@GeneratedValue(strategy = GenerationType.AUTO)
 		private Long id;
