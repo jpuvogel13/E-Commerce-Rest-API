@@ -23,10 +23,9 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 @Table(name = "Products")
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Product implements Serializable {
+public class Product {
 	
 	
-	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long productId;
