@@ -14,18 +14,12 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @Entity
 @Table(name = "orders")
 public class Order {
-	// IS SERIALIZABLE USEFUL HERE?
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long orderId;
 	private String username;
-	// private User user (Person who placed the order)
-	// Company ID will be a foreign key to both products table as well as companies
-	// table. Getters will use the company/product get methods to return the value
 	private String dateCreated;
-	//THIS IS TELLING JACKSON TO DONT SERIALIZE THE PRODUCTSLIST WHEN FETCHING AN ORDER
-	//@JsonIgnore
 	@OneToMany(mappedBy = "order")
 	private List<OrderProducts> orderProductList;
 
